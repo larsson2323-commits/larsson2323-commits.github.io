@@ -1,72 +1,432 @@
-{
-  "Anton Kamne": {
-    "rating": 1400,
-    "start": 1400,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 1400,
-    "start_ffa": 1400,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  },
-  "Björn Kamne": {
-    "rating": 1800,
-    "start": 1800,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 1800,
-    "start_ffa": 1800,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  },
-  "Jonas Eriksson": {
-    "rating": 1800,
-    "start": 1800,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 1800,
-    "start_ffa": 1800,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  },
-  "Thomas Wingren": {
-    "rating": 1800,
-    "start": 1800,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 1800,
-    "start_ffa": 1800,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  },
-  "Mikael Agebjörn": {
-    "rating": 2200,
-    "start": 2200,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 2200,
-    "start_ffa": 2200,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  },
-  "Peter Karlsson": {
-    "rating": 3000,
-    "start": 3000,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 3000,
-    "start_ffa": 3000,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  },
-  "Jonas Isaksson": {
-    "rating": 2378,
-    "start": 2378,
-    "last_played": "",
-    "games_1v1": 0,
-    "rating_ffa": 2378,
-    "start_ffa": 2378,
-    "last_played_ffa": "",
-    "games_ffa": 0
-  }
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Svensk Krocket Ranking</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue-dark: #163b63;
+    --blue: #2c5d91;
+    --blue-soft: #e8f0f9;
+    --cream: #f7f4ea;
+    --sand: #dfe6ef;
+    --text: #1f2a24;
+    --muted: #6b756c;
+    --white: #ffffff;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    margin: 0;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    background: var(--white);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(22, 59, 99, 0.16);
+}
+
+.header {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: white;
+    padding: 34px 28px;
+    text-align: center;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    margin-bottom: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 48px);
+}
+
+.subtitle {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 26px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid var(--sand);
+    border-radius: 12px;
+}
+
+.filters {
+    margin-top: 14px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.filters label {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filters input {
+    margin-right: 6px;
+}
+
+.stats {
+    margin-bottom: 14px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid var(--sand);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1350px;
+}
+
+th {
+    background: var(--blue-soft);
+    color: var(--blue-dark);
+    cursor: pointer;
+    user-select: none;
+    font-weight: 700;
+}
+
+th, td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #dfe6ef;
+    text-align: left;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #f8fbff;
+}
+
+.rank {
+    font-weight: 700;
+}
+
+.player {
+    font-weight: 600;
+}
+
+.rating {
+    font-weight: 700;
+    color: var(--blue-dark);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.winpct {
+    font-weight: 700;
+}
+
+.footer-note {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <img
+            class="logo"
+            src="https://www.svenskkrocket.se/favicon.ico"
+            alt="Svenska Krocketförbundet"
+        >
+
+        <h1>🏆 Svensk Krocket Ranking</h1>
+        <div class="subtitle">Aktuell ranking för Svensk Krocket</div>
+    </header>
+
+    <main class="content">
+
+        <div class="controls">
+            <input type="text" id="search" placeholder="Sök spelare...">
+
+            <div class="filters">
+                <label>
+                    <input type="checkbox" id="active12m">
+                    Aktiva senaste 12 månaderna
+                </label>
+
+                <label>
+                    <input type="checkbox" id="min5">
+                    Minst 5 matcher
+                </label>
+
+                <label>
+                    <input type="checkbox" id="min10">
+                    Minst 10 matcher
+                </label>
+            </div>
+        </div>
+
+        <div id="stats" class="stats"></div>
+        <div id="lastUpdated" class="stats"></div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-sort="rank">#</th>
+                        <th data-sort="name">Spelare</th>
+                        <th data-sort="rating">Aktuell Ranking</th>
+                        <th data-sort="start">Startranking</th>
+                        <th data-sort="games1v1">Matcher Tvåklotssingel</th>
+                        <th data-sort="wins1v1">Vinster Tvåklotssingel</th>
+                        <th data-sort="losses1v1">Förluster Tvåklotssingel</th>
+                        <th data-sort="winPct1v1">Vinst % Tvåklotssingel</th>
+                        <th data-sort="last1v1">Senast Tvåklotssingel</th>
+                        <th data-sort="gamesFfa">Matcher Enklotssingel</th>
+                        <th data-sort="winsFfa">Vinster Enklotssingel</th>
+                        <th data-sort="lossesFfa">Förluster Enklotssingel</th>
+                        <th data-sort="winPctFfa">Vinst % Enklotssingel</th>
+                        <th data-sort="lastFfa">Senast Enklotssingel</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ranking">
+                    <tr>
+                        <td colspan="14">Laddar ranking...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer-note">
+            Klicka på kolumnrubrikerna för att sortera.
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+let playersData = {};
+let sortBy = "rating";
+let sortDirection = "desc";
+
+const rankingBody = document.getElementById("ranking");
+const searchInput = document.getElementById("search");
+const stats = document.getElementById("stats");
+
+const active12m = document.getElementById("active12m");
+const min5 = document.getElementById("min5");
+const min10 = document.getElementById("min10");
+
+fetch("./rankings.json")
+    .then(response => response.json())
+    .then(data => {
+        playersData = data;
+        render();
+    })
+    .catch(error => {
+        rankingBody.innerHTML = `
+            <tr>
+                <td colspan="14">Kunde inte läsa rankings.json</td>
+            </tr>
+        `;
+        console.error(error);
+    });
+
+function calcWinPct(wins, losses) {
+    const total = wins + losses;
+    if (total === 0) return 0;
+    return Number(((wins / total) * 100).toFixed(1));
+}
+
+function getPlayers() {
+    return Object.entries(playersData).map(([name, player]) => {
+        const wins1v1 = Number(player.wins_1v1 || 0);
+        const losses1v1 = Number(player.losses_1v1 || 0);
+        const winsFfa = Number(player.wins_ffa || 0);
+        const lossesFfa = Number(player.losses_ffa || 0);
+
+        return {
+            name: name,
+            rating: Number(player.rating || 0),
+            start: Number(player.start || 0),
+
+            games1v1: Number(player.games_1v1 || 0),
+            wins1v1: wins1v1,
+            losses1v1: losses1v1,
+            winPct1v1: calcWinPct(wins1v1, losses1v1),
+            last1v1: player.last_played || "",
+
+            gamesFfa: Number(player.games_ffa || 0),
+            winsFfa: winsFfa,
+            lossesFfa: lossesFfa,
+            winPctFfa: calcWinPct(winsFfa, lossesFfa),
+            lastFfa: player.last_played_ffa || "",
+
+            totalGames: Number(player.games_1v1 || 0) + Number(player.games_ffa || 0)
+        };
+    });
+}
+
+function hasPlayedWithinLast12Months(player) {
+    const cutoff = new Date();
+    cutoff.setFullYear(cutoff.getFullYear() - 1);
+
+    const dates = [];
+
+    if (player.last1v1) {
+        dates.push(new Date(player.last1v1));
+    }
+
+    if (player.lastFfa) {
+        dates.push(new Date(player.lastFfa));
+    }
+
+    return dates.some(date => !isNaN(date) && date >= cutoff);
+}
+
+function render() {
+    const search = searchInput.value.toLowerCase();
+
+    let players = getPlayers()
+        .filter(player => player.name.toLowerCase().includes(search));
+
+    if (active12m.checked) {
+        players = players.filter(player => hasPlayedWithinLast12Months(player));
+    }
+
+    if (min5.checked) {
+        players = players.filter(player => player.totalGames >= 5);
+    }
+
+    if (min10.checked) {
+        players = players.filter(player => player.totalGames >= 10);
+    }
+
+    players.sort((a, b) => {
+        let valueA = a[sortBy];
+        let valueB = b[sortBy];
+
+        if (sortBy === "rank") {
+            valueA = a.rating;
+            valueB = b.rating;
+        }
+
+        if (typeof valueA === "string") {
+            valueA = valueA.toLowerCase();
+            valueB = valueB.toLowerCase();
+        }
+
+        if (valueA < valueB) return sortDirection === "asc" ? -1 : 1;
+        if (valueA > valueB) return sortDirection === "asc" ? 1 : -1;
+        return 0;
+    });
+
+    stats.textContent = `Visar ${players.length} spelare`;
+
+    if (players.length === 0) {
+        rankingBody.innerHTML = `
+            <tr>
+                <td colspan="14">Inga spelare hittades.</td>
+            </tr>
+        `;
+        return;
+    }
+
+    rankingBody.innerHTML = players.map((player, index) => {
+        let placement =
+            index === 0 ? "🥇" :
+            index === 1 ? "🥈" :
+            index === 2 ? "🥉" :
+            index + 1;
+
+        return `
+            <tr>
+                <td class="rank">${placement}</td>
+                <td class="player">${player.name}</td>
+                <td class="rating">${player.rating}</td>
+                <td>${player.start}</td>
+
+                <td>${player.games1v1}</td>
+                <td>${player.wins1v1}</td>
+                <td>${player.losses1v1}</td>
+                <td class="winpct">${player.winPct1v1}%</td>
+                <td class="muted">${player.last1v1 || "–"}</td>
+
+                <td>${player.gamesFfa}</td>
+                <td>${player.winsFfa}</td>
+                <td>${player.lossesFfa}</td>
+                <td class="winpct">${player.winPctFfa}%</td>
+                <td class="muted">${player.lastFfa || "–"}</td>
+            </tr>
+        `;
+    }).join("");
+}
+
+searchInput.addEventListener("input", render);
+active12m.addEventListener("change", render);
+min5.addEventListener("change", render);
+min10.addEventListener("change", render);
+
+document.querySelectorAll("th").forEach(th => {
+    th.addEventListener("click", () => {
+        const selectedSort = th.dataset.sort;
+
+        if (sortBy === selectedSort) {
+            sortDirection = sortDirection === "asc" ? "desc" : "asc";
+        } else {
+            sortBy = selectedSort;
+            sortDirection = selectedSort === "name" ? "asc" : "desc";
+        }
+
+        render();
+    });
+});
+</script>
+
+</body>
+</html>
