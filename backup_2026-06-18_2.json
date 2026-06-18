@@ -1,0 +1,167 @@
+{
+  "players": {
+    "Mikael Agebjörn": {
+      "rating": 2160,
+      "start": 2160,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 2160,
+      "start_ffa": 2160,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Thomas C Ericsson": {
+      "rating": 2090,
+      "start": 2090,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 2090,
+      "start_ffa": 2090,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Krister Ekholm": {
+      "rating": 2060,
+      "start": 2060,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 2060,
+      "start_ffa": 2060,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Erik Svensson": {
+      "rating": 1920,
+      "start": 1920,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1920,
+      "start_ffa": 1920,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Mathias Johansson": {
+      "rating": 1830,
+      "start": 1830,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1830,
+      "start_ffa": 1830,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Anders Holmqvist": {
+      "rating": 1780,
+      "start": 1780,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1780,
+      "start_ffa": 1780,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Ursula Svensson": {
+      "rating": 1750,
+      "start": 1750,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1750,
+      "start_ffa": 1750,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Jan Svensson": {
+      "rating": 1750,
+      "start": 1750,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1750,
+      "start_ffa": 1750,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Peter Grönborg": {
+      "rating": 1720,
+      "start": 1720,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1720,
+      "start_ffa": 1720,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Anton Kamne": {
+      "rating": 1700,
+      "start": 1700,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1700,
+      "start_ffa": 1700,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Björn Kamne": {
+      "rating": 1700,
+      "start": 1700,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1700,
+      "start_ffa": 1700,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Tim Öhrberg": {
+      "rating": 1660,
+      "start": 1660,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1660,
+      "start_ffa": 1660,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Lars-Inge Nilsson": {
+      "rating": 1580,
+      "start": 1580,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1580,
+      "start_ffa": 1580,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Eje Elebo": {
+      "rating": 1700,
+      "start": 1700,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1700,
+      "start_ffa": 1700,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Joi Elebo": {
+      "rating": 1690,
+      "start": 1690,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1690,
+      "start_ffa": 1690,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    },
+    "Oskar Forsberg": {
+      "rating": 1600,
+      "start": 1600,
+      "last_played": "",
+      "games_1v1": 0,
+      "rating_ffa": 1600,
+      "start_ffa": 1600,
+      "last_played_ffa": "",
+      "games_ffa": 0
+    }
+  },
+  "history": {
+    "matches": []
+  }
+}

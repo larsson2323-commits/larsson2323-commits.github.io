@@ -1,0 +1,13 @@
+{
+  "matches": [
+    {
+      "type": "manual_rating_edit",
+      "tid": "2026-06-18 09:58:49",
+      "player": "Joi Elebo",
+      "old_rating_1v1": 1690,
+      "new_rating_1v1": 1650,
+      "old_rating_ffa": 1690,
+      "new_rating_ffa": 1650
+    }
+  ]
+}
