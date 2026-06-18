@@ -334,5 +334,19 @@
     "games_ffa": 0,
     "wins_ffa": 0,
     "losses_ffa": 0
+  },
+  "Lewis Palmer": {
+    "rating": 1500,
+    "start": 1500,
+    "last_played": "",
+    "games_1v1": 0,
+    "wins_1v1": 0,
+    "losses_1v1": 0,
+    "rating_ffa": 1500,
+    "start_ffa": 1500,
+    "last_played_ffa": "",
+    "games_ffa": 0,
+    "wins_ffa": 0,
+    "losses_ffa": 0
   }
 }
