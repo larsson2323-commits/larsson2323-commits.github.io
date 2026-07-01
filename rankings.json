@@ -293,20 +293,6 @@
     "wins_ffa": 1,
     "losses_ffa": 4
   },
-  "Johan Bergefelt": {
-    "rating": 1502,
-    "start": 1500,
-    "last_played": "",
-    "games_1v1": 0,
-    "wins_1v1": 0,
-    "losses_1v1": 0,
-    "rating_ffa": 1502,
-    "start_ffa": 1500,
-    "last_played_ffa": "2026-07-01",
-    "games_ffa": 4,
-    "wins_ffa": 0,
-    "losses_ffa": 4
-  },
   "Daniel Larsson": {
     "rating": 1500,
     "start": 1500,
@@ -376,5 +362,19 @@
     "games_ffa": 0,
     "wins_ffa": 0,
     "losses_ffa": 0
+  },
+  "Johan Bergfelt": {
+    "rating": 1502,
+    "start": 1500,
+    "last_played": "",
+    "games_1v1": 0,
+    "wins_1v1": 0,
+    "losses_1v1": 0,
+    "rating_ffa": 1502,
+    "start_ffa": 1500,
+    "last_played_ffa": "2026-07-01",
+    "games_ffa": 4,
+    "wins_ffa": 0,
+    "losses_ffa": 4
   }
 }
